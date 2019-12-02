@@ -23,7 +23,7 @@ def arg_parse():
                     help="test batch size")
     parser.add_argument('--ngpu', default=1, type=int,
                         help="number of gpus")
-    parser.add_argument('--lr', default=0.00025, type=float,
+    parser.add_argument('--lr', default=0.0002, type=float,
                     help="initial learning rate")
     parser.add_argument('--beta', default=0.5, type=float,
                         help="initial beta")

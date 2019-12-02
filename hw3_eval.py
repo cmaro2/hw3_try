@@ -1,11 +1,13 @@
 import sys, csv
 args = sys.argv
 
-with open(args[1], mode='r') as pred:
+with open('test_pred.csv', mode='r') as pred:
     reader = csv.reader(pred)
     pred_dict = {rows[0]:rows[1] for rows in reader}
 
-with open(args[2], mode='r') as gt:
+with open('hw3_data/digits/mnistm/test.csv', mode='r') as gt:
+#with open(args[2], mode='r') as gt:
+
     reader = csv.reader(gt)
     gt_dict = {rows[0]:rows[1] for rows in reader}
 

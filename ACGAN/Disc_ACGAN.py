@@ -1,4 +1,3 @@
-import torch
 import torch.nn as nn
 
 class Discriminator(nn.Module):
@@ -51,6 +50,4 @@ class Discriminator(nn.Module):
         conv4 = self.conv4(conv3)
         realfake = self.conv5(conv4).view(-1)
         classes = self.conv6(conv4).view(-1,2)
-        #classes = self.softmax(fc_aux)
-        #realfake = self.sigmoid(fc_dis).view(-1, 1).squeeze(1)
         return realfake, classes
